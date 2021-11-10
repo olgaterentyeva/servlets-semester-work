@@ -13,7 +13,7 @@
         <input class="input input-field password" type="password" id="password" name="password" placeholder="Введите пароль">
         <input type="submit" value="Войти" class="btn">
     </form>
-    <div class="button"><a href="/index">Вернуться на главную</a></div>
+    <div class="button"><a href="signin.jsp">Перейти к регистрации</a></div>
 </div>
 
 <script>

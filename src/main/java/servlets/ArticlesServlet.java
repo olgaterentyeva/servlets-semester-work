@@ -18,7 +18,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet("/index")
+@WebServlet("/main")
 public class ArticlesServlet extends HttpServlet {
 
     private ArticlesRepository articlesRepository;
@@ -42,14 +42,14 @@ public class ArticlesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Article> articles = articlesRepository.findAll();
         req.setAttribute("articles", articles);
-        req.getRequestDispatcher("index.jsp").forward(req, resp);
+        req.getRequestDispatcher("main.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String s = req.getParameter("article");
         req.getSession().setAttribute("article", Integer.valueOf(s));
-        resp.sendRedirect("/index");
+        resp.sendRedirect("/main");
     }
 
 }

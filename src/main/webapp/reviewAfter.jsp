@@ -8,7 +8,7 @@
 <body>
 <div class="form-style-5">
         <h2>Ваш отзыв о портале КиноМонстр успешно записан!</h2>
-        <div class="button"><a href="index.jsp">Вернуться на главную</a></div>
+        <div class="button"><a href="/main">Вернуться на главную</a></div>
 </div>
 
 </body>
