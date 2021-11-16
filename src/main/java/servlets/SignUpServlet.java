@@ -16,7 +16,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@WebServlet("/signup")
+@WebServlet("/index")
 public class SignUpServlet extends HttpServlet {
 
     private UserService usersService;
@@ -54,7 +54,7 @@ public class SignUpServlet extends HttpServlet {
         usersService.signup(signUpForm);
 
 //        req.getRequestDispatcher("/jsp/signup.jsp").forward(req, resp);
-        resp.sendRedirect("/main");
+        resp.sendRedirect("main");
     }
 
 }

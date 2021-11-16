@@ -23,7 +23,6 @@ public class ArticlesRepositoryImpl implements ArticlesRepository {
     }
 
 
-
     @Override
     public List<Article> findAll() {
         ResultSet resultSet = null;

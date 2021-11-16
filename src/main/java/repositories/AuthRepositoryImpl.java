@@ -11,7 +11,7 @@ import java.util.Optional;
 public class AuthRepositoryImpl implements AuthRepository {
 
     private Connection connection;
-    private final String SQL_FIND_BY_COOKIE_VALUE = "SELECT *, auth.id as auth_id, users.id as user_id FROM auth INNER JOIN users ON auth.user_id=users.id WHERE auth.cookie_value=?";
+    private final String SQL_FIND_BY_COOKIE_VALUE = "SELECT *, auth.id as auth_id, userdata.id as user_id FROM auth INNER JOIN userdata ON auth.user_id=userdata.id WHERE auth.cookie_value=?";
     private final String SQL_INSERT_AUTH = "INSERT INTO auth (user_id, cookie_value) VALUES (?, ?)";
 
     public AuthRepositoryImpl(Connection connection) {
@@ -24,8 +24,10 @@ public class AuthRepositoryImpl implements AuthRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND_BY_COOKIE_VALUE);
             preparedStatement.setString(1, cookieValue);
-            resultSet = preparedStatement.executeQuery();
-            return authRowMapper.rowMap(resultSet);
+            preparedStatement.executeQuery();
+            resultSet = preparedStatement.getResultSet();
+            Auth auth = authRowMapper.rowMap(resultSet);
+            return auth;
         } catch (Exception e) {
             return null;
         }

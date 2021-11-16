@@ -35,12 +35,12 @@
 
             <h2>Описание Безумный Макс</h2>
             <div class="description_film">
-                <img src="img/cloud.png">
+                <img src="img/max.png">
                 Когда засуха приводит человечество к продовольственному кризису, коллектив исследователей и ученых отправляется сквозь червоточину (которая предположительно соединяет области пространства-времени через большое расстояние) в путешествие, чтобы превзойти прежние ограничения для космических путешетсвий человека и переселить человечество на другую планету.
             </div>
 
             <hr>
-            <h2>Отзывы об Облачный атлас</h2>
+            <h2>Отзывы Безумный Макс</h2>
 
             <c:forEach var="review" items="${reviews}">
                 <div class="reviews">
@@ -60,7 +60,7 @@
             <div class="send">
                 <form method="post" action="/show_film" id="review" >
 
-                    <input type="text" name="review_name" placeholder="ваше имя" required="">film
+                    <input type="text" name="review_name" placeholder="ваше имя" required="">
                     <textarea name="review_text" required=""></textarea>
                     <input type="submit" value="отправить">
                 </form>

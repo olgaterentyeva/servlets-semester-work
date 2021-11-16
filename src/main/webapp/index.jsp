@@ -8,7 +8,7 @@
 <body>
 <div class="form-style-5">
     <h2>КиноМонстр</h2>
-    <form class="signup-form" method="post" action="/signup">
+    <form class="signup-form" method="post" action="/index">
         <input class="input input-field name" type="text" id="name" name="name" placeholder="Логин">
         <input class="input input-field email" type="email" id="email" name="email" placeholder="Email">
         <lable><p>Длина пароля от 4 до 12 символов, обязательны одна заглавная буква и цифра</p>

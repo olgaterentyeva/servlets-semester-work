@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Отзыв о портале</title>
-    <%--    <link rel="stylesheet" href="../css/style.css">--%>
     <link rel="stylesheet" href="../css/form.css">
 </head>
 <body>

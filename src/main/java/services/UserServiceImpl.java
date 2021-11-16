@@ -20,6 +20,13 @@ public class UserServiceImpl implements UserService {
     private AuthRepository authRepository;
     private PasswordEncoder passwordEncoder;
 
+    public AuthRepository getAuthRepository() {
+        return authRepository;
+    }
+
+    public void setAuthRepository(AuthRepository authRepository) {
+        this.authRepository = authRepository;
+    }
 
     public UserServiceImpl(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;
